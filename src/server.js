@@ -4,7 +4,9 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import usuarioRoutes from "./routes/usuarios.routes.js"; // Apelidei o "router"
+import usuarioRoutes from "./routes/usuarios.routes.js"; // Apelidei o "router" para usuarioRoutes
+import livroRoutes from "./routes/livros.routes.js"; // Apelidei o "router" para livroRoutes
+import avalicaoRoutes from "./routes/avaliacoes.routes.js"; // Apelidei o "router" para avalicaoRoutes
 
 // ============================
 //  Configuração do servidor
@@ -17,7 +19,9 @@ app.get("/", (req, res) => {
   res.send("API funcionando");
 })
 
-app.use("/usuarios", usuarioRoutes)
+app.use("/livros", livroRoutes);
+app.use("/usuarios", usuarioRoutes);
+app.use("/avaliacoes", avalicaoRoutes);
 
 // ============================
 //  Inicia o servidor
