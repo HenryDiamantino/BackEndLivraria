@@ -7,6 +7,8 @@ import cors from "cors";
 import usuarioRoutes from "./routes/usuarios.routes.js"; // Apelidei o "router" para usuarioRoutes
 import livroRoutes from "./routes/livros.routes.js"; // Apelidei o "router" para livroRoutes
 import avalicaoRoutes from "./routes/avaliacoes.routes.js"; // Apelidei o "router" para avalicaoRoutes
+import reservaRoutes from "./routes/reservas.routes.js";
+import favoritoRoutes from "./routes/favoritos.routes.js";
 
 // ============================
 //  Configuração do servidor
@@ -22,6 +24,8 @@ app.get("/", (req, res) => {
 app.use("/livros", livroRoutes);
 app.use("/usuarios", usuarioRoutes);
 app.use("/avaliacoes", avalicaoRoutes);
+app.use("/reservas", reservaRoutes);
+app.use("/favoritos", favoritoRoutes);
 
 // ============================
 //  Inicia o servidor
